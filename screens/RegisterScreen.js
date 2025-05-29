@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import { auth } from '../firebaseConfigSetting'; // Dùng auth đã khởi tạo
 
-const auth = getAuth();
-const db = getFirestore();
+const db = getFirestore(); // Dòng này vẫn được giữ
 
 const RegisterScreen = () => {
   const [phone, setPhone] = useState('');

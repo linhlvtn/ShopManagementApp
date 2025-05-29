@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-
-const auth = getAuth();
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebaseConfigSetting'; // Đã khởi tạo sẵn
 
 const LoginScreen = () => {
   const [phone, setPhone] = useState('');
